@@ -14,3 +14,9 @@ img {
 button{
     background-color: #0C356A !important;
 }
+.list-group-item{
+    background-color: #FFF0CE;
+}
+.btn{
+    margin-top: 10px;
+}

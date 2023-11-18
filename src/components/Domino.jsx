@@ -21,13 +21,13 @@ export default class Domino extends React.Component {
             <>
                 <Container className="h-100">
                     <Row className="h-100 justify-content-center align-items-center">
-                        <Card style={{ width: '18rem',height:'max-content' }} >
+                        <Card className={this.state.face === this.props.cache && 'bg-success'} style={{ width: '18rem', height: 'max-content' }} >
                             <Card.Img variant="top" src={`imgs/${this.state.face}.png`} />
                             <Card.Body>
                                 <ListGroup className="list-group-flush">
                                     <ListGroup.Item>Random Face: {this.state.face !== this.props.cache ? this.state.face : this.state.face}</ListGroup.Item>
                                     <ListGroup.Item>Numbre essay: {this.state.essay}</ListGroup.Item>
-                                    <ListGroup.Item>{this.state.face === this.props.cache ? "Good! You find Number Cache" : "????"}</ListGroup.Item>
+                                    <ListGroup.Item className={this.state.face === this.props.cache && 'text-success'}>{this.state.face === this.props.cache ? "Good! You find Number Cache" : "..."}</ListGroup.Item>
                                 </ListGroup>
                                 {this.state.face === this.props.cache ? <Button variant="primary" onClick={this.reset}>reset</Button> : <Button variant="primary" onClick={this.find}>Find It</Button>}
                             </Card.Body>
