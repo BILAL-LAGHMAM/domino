@@ -5,7 +5,7 @@ import Domino from './components/Domino';
 function App() {
   return (
     <div className="App">
-      <Domino cache={3} />
+      <Domino />
     </div>
   );
 }
